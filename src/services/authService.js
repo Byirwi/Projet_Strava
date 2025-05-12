@@ -15,7 +15,7 @@ class AuthService {
     }
 
     async login(email,password){
-        try{
+        try{    
             const user = await User.findOne({where:{email}});
             if (!User) {
                 throw new Error('L\'authentification a échoué. Veuillez vérifier l\'adresse email');
