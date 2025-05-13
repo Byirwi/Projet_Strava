@@ -5,13 +5,13 @@ const server = http.createServer(app);
 
 require('dotenv').config();
 
-// const activityRouter = require('./routes/activity');
+const activityRouter = require('./routes/activity');
 const authRouter = require('./routes/auth');
 //const likeRouter = require('./routes/like');
 //const statsRouter = require('./routes/stats');
 const userRouter = require('./routes/user');
 
-//app.use('/api/v1',activityRouter);
+app.use('/api/v1',activityRouter);
 app.use('/api/v1',authRouter);
 //app.use('/api/v1',followRouter);
 //app.use('/api/v1',likeRouter);
