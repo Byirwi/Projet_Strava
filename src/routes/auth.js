@@ -9,4 +9,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const authController = require('../controllers/authController');
 
 //Route
-app.post('/regsiter', authController.register);
+app.post('/register', authController.register);
+app.post('/login', authController.login);
+
+module.exports = app;

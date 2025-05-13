@@ -2,9 +2,9 @@ const jwt = require('jsonwebtoken');
 
 
 function verifyToken(req, res, next) {
-    let token = req.headers['Authorization'];
+    let token = req.header('Authorization');
     if (!token) {
-        return res.status(401).json({ message: 'Trompette' });
+        return res.status(401).json({ message: 'Le token n\'existe pas' });
     }
 
     if (token.startsWith('Bearer ')) {
