@@ -11,3 +11,5 @@ const activityController = require('../controllers/activityController');
 //Route
 app.post('/activity', verifyToken, activityController.createActivity);
 app.get('/activity', verifyToken, activityController.getAllActivity);
+
+module.exports = app;
